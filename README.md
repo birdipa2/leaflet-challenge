@@ -73,4 +73,6 @@ The following libraries and services are used in the project:
 - USGS Earthquake API: [https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
 - Tectonic Plates GeoJSON Data: [https://github.com/fraxen/tectonicplates](https://github.com/fraxen/tectonicplates)
 
+## Contact
 
+If you have any questions or feedback about this script, please feel free to contact me at param.birdi@utoronto.ca
