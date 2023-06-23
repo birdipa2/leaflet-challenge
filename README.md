@@ -1,37 +1,76 @@
 # leaflet-challenge
-## Earthquake Visualization
+# Leaflet-Part-1 & Leaflet-Part-2
 
-This project visualizes earthquake data using Leaflet and D3.js. It displays earthquake locations on a map, with markers representing the magnitude and color representing the depth of each earthquake.
+This repository contains two parts of a Leaflet project: Leaflet-Part-1 and Leaflet-Part-2. Leaflet is a JavaScript library for interactive maps. Leaflet-Part-1 focuses on displaying earthquake data, while Leaflet-Part-2 includes both tectonic and earthquake data.
 
-## Files
+## Folder Structure
 
-### index.html
+The repository has the following folder structure:
 
-The HTML file (`index.html`) contains the structure of the webpage. It includes the necessary CSS and JavaScript dependencies, such as the Leaflet CSS and JavaScript files, the D3.js library, and the custom JavaScript file (`logic.js`) that handles the earthquake data and map visualization. The HTML file also includes a `<div>` element with an id of "map" that serves as the container for the Leaflet map.
+- Leaflet-Part-1
+  - index.html
+  - static
+    - css
+      - style.css
+    - js
+      - logic.js
 
-### style.css
+- Leaflet-Part-2
+  - index.html
+  - static
+    - css
+      - style.css
+    - js
+      - logic.js
 
-The CSS file (`style.css`) contains styling rules for the webpage. It includes styles to set the height of the map container and ensure it takes up the full height of the viewport. It also defines styles for the legend, which is used to display the color-coded depth information.
+## Leaflet-Part-1
 
-## logic.js
+In Leaflet-Part-1, the webpage displays earthquake data on an interactive map. The index.html file contains the HTML structure, while the static/css/style.css file contains the CSS styles for the webpage. The static/js/logic.js file contains the JavaScript code for fetching earthquake data and creating the map.
 
-The JavaScript file (`logic.js`) is responsible for fetching earthquake data from the provided GeoJSON API, processing the data, and visualizing it on the Leaflet map.
+The following functionalities are implemented in Leaflet-Part-1:
 
-1. It starts by defining the URL of the GeoJSON data source.
-2. The code uses the `d3.json()` function to fetch the earthquake data.
-3. The data is processed to filter earthquakes based on location (in this case, filtering for earthquakes in Colorado). One can always zoom out to view additional locations.
-4. Leaflet and D3.js are used to create a map and visualize the earthquakes as circle markers.
-5. The `getColor` function is defined to assign colors to the circle markers based on the depth of the earthquakes.
-6. The circle markers are added to a layer group and displayed on the map.
-7. The code sets up base maps and overlay maps for layer control in Leaflet.
-8. A legend control is created and added to the map to display depth information.
-9. Finally, the map and controls are added to the HTML page.
+- Displaying earthquake data from the provided USGS API
+- Creating circle markers with sizes corresponding to earthquake magnitudes
+- Assigning different colors to the markers based on earthquake depths
+- Adding a legend to indicate depth ranges and their corresponding colors
+- Providing interactivity with popups showing additional details of each earthquake
 
-## Getting Started
+## Leaflet-Part-2
 
-To run the project, simply open the `index.html` file in a web browser. The browser will load the necessary dependencies and display the earthquake visualization on the map.
+In Leaflet-Part-2, the webpage extends the functionality of Leaflet-Part-1 by adding tectonic plates data to the map. In addition to the earthquake data, the tectonic plates data is fetched and visualized on the map.
 
-## Customization
+The following functionalities are added in Leaflet-Part-2:
 
-To customize the visualization, you can modify the code in `logic.js`. You can change the GeoJSON data source URL, adjust the filtering criteria, customize the map settings, and modify the styling and legend in the code as per your requirements.
+- Fetching tectonic plates data from the provided GeoJSON file
+- Displaying tectonic plates as a separate layer on the map
+- Providing layer controls to toggle the display of earthquake data and tectonic plates independently
+
+## Running the Application
+
+To run the application, follow these steps:
+
+1. Clone the repository or download the ZIP file.
+2. Navigate to the desired part (Leaflet-Part-1 or Leaflet-Part-2) in your local file system.
+3. Open the `index.html` file in a web browser.
+
+Make sure you have an active internet connection to fetch the necessary map tiles and data from external sources.
+
+## Dependencies
+
+The following libraries and services are used in the project:
+
+- Leaflet: A JavaScript library for interactive maps.
+- D3.js: A JavaScript library for data manipulation and visualization.
+- Carto: A tile provider for grayscale map tiles.
+- Google Maps: A tile provider for satellite map tiles.
+
+## References
+
+- Leaflet Documentation: [https://leafletjs.com/](https://leafletjs.com/)
+- D3.js Documentation: [https://d3js.org/](https://d3js.org/)
+- Carto: [https://carto.com/](https://carto.com/)
+- Google Maps: [https://www.google.com/maps](https://www.google.com/maps)
+- USGS Earthquake API: [https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
+- Tectonic Plates GeoJSON Data: [https://github.com/fraxen/tectonicplates](https://github.com/fraxen/tectonicplates)
+
 
